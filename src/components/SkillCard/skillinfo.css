@@ -1,0 +1,50 @@
+.skills-info-card{
+    width: 33rem;
+    min-height: 10rem;  
+    margin-left: -9%;
+    border-radius: 0.65rem;
+    border: 1.5px solid yellow;
+    background: rgba(22, 17, 47 , 0.398);
+    backdrop-filter: blur(1rem);
+}
+
+h6{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: yellow;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(180deg, #ffffff 0%, #ecd92c 100%);
+    -webkit-background-clip: text;
+    border-bottom: 1.5px solid yellow;
+}
+
+.skills-info-content{
+    padding: 2rem;
+}
+
+.skill-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-info p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.skill-info .percentage{
+    color: yellow;
+}
+
+.skill-progress-bg {
+    width: 100%;
+    background-color: #e0e0e0; /* Background color for the progress bar */
+    border-radius: 5px; 
+    overflow: hidden; 
+}
+
+.skill-progress {
+    height: 10px; 
+    background-color: #eed600; /* Color of the filled part */
+    transition: width 0.3s ease; /* Smooth transition */
+}

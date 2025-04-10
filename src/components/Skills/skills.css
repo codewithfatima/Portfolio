@@ -1,0 +1,31 @@
+.skills-container{
+    margin: 4rem 0;
+    position: relative;
+    margin-left: 13%;
+}
+
+.skills-container h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    margin-left: -7rem;
+}
+
+.skills-content{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+
+.skills{
+    flex: 1;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.skills-info{
+    flex: 1;
+}

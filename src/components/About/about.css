@@ -1,0 +1,121 @@
+  /* Style heading */
+  #about h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
+  
+  .about__container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .about__content {
+    /* flex: 1;
+     */
+    
+  }
+  
+  .about__content p {
+    margin-top: 1rem;
+    font-size: 18px;
+    line-height: 1.6;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-bottom : 1rem;
+    margin-right: 5rem;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: rgb(240, 240, 161);
+  }
+  
+  .about__me{
+    width: 100%;
+    margin-left: 25%;
+    padding-right: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: .5rem;
+    display: grid;
+    place-items: center;
+  }
+  .about__image:hover{
+    transform: rotate(0);
+    transform:rotate(10deg);
+    overflow: hidden;
+  }
+
+  .bte{
+        width:max-content;
+        display: inline-block;
+        padding: 0.75rem 1.2rem;
+        margin-top: 20px;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        border: 1px soild var(--color-primary);
+        transition: var(--transition);
+        background-color: var(--color-primary);
+        margin-bottom: 8rem;
+        text-align: center;
+        justify-content: center;
+  }
+
+  /* Media queries */
+  @media (max-width: 1024px) {
+    /* Style heading */
+    #about h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+    .about__container {
+      grid-template-columns: 1fr;
+      gap: 10%;
+    }
+  
+    /* Style for the image */
+    .about__image {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  
+    /* Style for the content */
+    .about__content p {
+      font-size: 16px;
+      margin-left: 0;
+    }
+  
+    .about__me {
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Style heading */
+    #about h2 {
+      font-size: 20px;
+    }
+  
+    .about__container {
+      display: block;
+    }
+  
+    /* Style for the image */
+    .about__image {
+      max-width: 100%;
+      margin-left: 0;
+    }
+  
+    /* Style for the content */
+    .about__content p {
+      font-size: 14px;
+      margin-left: 0;
+    }
+  
+    .about__me {
+      margin-left: 0;
+    }
+  }
+  

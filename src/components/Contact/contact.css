@@ -1,0 +1,128 @@
+h4{
+    font-size: 1rem;
+}
+
+.logo{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.container.contact__container{
+    grid-template-columns: 30% 58%;
+    width: 63%;
+    display: grid;
+    gap: 12%;
+}
+
+.contact__options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__option{
+    background: rgb(17, 17, 16);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.contact__option:hover{
+   background: transparent;
+   border-color: var(--color-bg-variant);
+}
+
+.contact__option-icon{
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+color: yellow;
+}
+
+.contact__option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.contact__option a{
+    color: white;
+
+}
+/* Position the success/error message at the top right */
+.message-success, .message-error {
+    position: fixed;
+    top: 20px;  /* Space from the top */
+    right: 20px;  /* Space from the right side */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;  /* Ensure the message is on top of other elements */
+    transition: opacity 0.5s ease-in-out;  /* Add transition effect */
+  }
+  
+  .message-success {
+    background-color: #28a745;  /* Green background for success */
+    color: white;
+  }
+  
+  .message-error {
+    background-color: #dc3545;  /* Red background for error */
+    color: white;
+  }
+  
+  .check-icon {
+    margin-right: 10px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+
+/* ************************form section styling */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 50px;
+}
+
+input , textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border-color: var(--color-bg-variant);
+    border: 2px solid rgb(255, 238, 0);
+    resize: none;
+    color: var(--color-white);
+}
+
+.btn{
+     font-weight: bolder;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-family: Arial, Helvetica, sans-serif;
+}
+/* ***********************************Media queries */
+@media screen and (max-width:1024px){
+    .container.contact__container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width:600px){
+    .container.contact__container{
+        width: var(--container-width-sm);
+    }
+} 
+
+.log{
+    font-size: 1rem;
+    margin-top: 3%;
+    font-weight: 500;
+}

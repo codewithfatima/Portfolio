@@ -1,0 +1,98 @@
+.skills-card {
+    border-radius: 0.65rem;
+    border: 1.5px solid yellow;
+    padding: 2.5rem;
+    text-align: center;
+    width: 16rem;
+    margin-left: -10%;
+    position: relative;
+    cursor: pointer;
+    color:rgb(177, 169, 16);
+    transition: all 0.3s ease;
+}
+
+.skills-card:hover,
+.skills-card.active {
+    background: linear-gradient(180deg, #ffffffd4 0%, #ffeb3b 100%);
+}
+
+.skills-card span {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.skill-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(218, 218, 213);
+    border-radius: 0.65rem;
+    border: 1.5px solid #fdfd04;  /* Fixed typo here */
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+}
+
+.skill-icon img {
+    width: 2.4rem;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 1025px) {
+    .skills-card {
+        padding: 2rem;
+    }
+    .skill-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    .skill-icon img {
+        width: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .skills-card {
+        width: 100%; /* Take up full width */
+        margin-left: 0;
+        padding: 1.5rem; /* Reduce padding */
+    }
+
+    .skills-container {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .skills-container h5 {
+        font-size: 1.2rem; /* Smaller font size */
+        margin-left: 0; /* Adjust margin for alignment */
+    }
+}
+
+/* For very small screens (Mobile Portrait) */
+@media (max-width: 480px) {
+    .skills-container h5 {
+        font-size: 1rem; /* Smaller font size for tiny screens */
+        margin-left: 0; /* Adjust margin */
+    }
+
+    .skills-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .skill-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .skill-icon img {
+        width: 1.5rem;
+    }
+}
