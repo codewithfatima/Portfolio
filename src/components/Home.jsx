@@ -40,7 +40,7 @@ const Home = () => {
             </motion.span>
 
             <h2 className="text-5xl md:text-7xl font-extrabold leading-tight">
-              Hi, I'm{" "}
+              I'm{" "}
               <span className="text-emerald-400 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 Fatima
               </span>
