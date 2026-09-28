@@ -162,7 +162,16 @@ const Projects = () => {
       },
     },
   };
-  const tabs = ['all', 'front', 'back'];
+  // const tabs = ['all', 'front', 'back'];
+
+   const tabLabels = {
+    all: 'All',
+    react: 'React',
+    mern: 'MERN',
+    'html-css-js': 'HTML / CSS / JS',
+    angular: 'Angular',
+  };
+  const tabs = ['all', 'react', 'mern', 'html-css-js', 'angular'];
   return (
     <section id='portfolio' className="py-16 px-5 bg-[#0f172a] text-white">
       {/* Heading */}
@@ -188,19 +197,21 @@ const Projects = () => {
       {/* Tabs */}
       <div className="flex justify-center gap-4 mb-12 flex-wrap">
         {tabs.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 rounded-full border border-emerald-400 text-sm transition 
-              ${activeTab === tab
-                ? 'bg-emerald-400 text-[#0f172a] font-bold'
-                : 'text-emerald-400 hover:bg-emerald-500 hover:text-black'
-              }`}
-          >
-            {tab === 'all' ? 'All' : tab === 'front' ? 'Front-End' : 'Back-End'}
-          </button>
-        ))}
+  <button
+    key={tab}
+    onClick={() => setActiveTab(tab)}
+    className={`px-4 py-2 rounded-full border border-emerald-400 text-sm transition 
+      ${activeTab === tab
+        ? 'bg-emerald-400 text-[#0f172a] font-bold'
+        : 'text-emerald-400 hover:bg-emerald-500 hover:text-black'
+      }`}
+  >
+    {tabLabels[tab]}
+  </button>
+))}
       </div>
+
+
 
       {/* Project Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
