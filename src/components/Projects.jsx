@@ -32,7 +32,7 @@ const Projects = () => {
       title: 'E-Commerce Website',
       category: 'net',
       github: 'https://github.com/codewithfatima/ECommerce-Website-In-Net',
-      demo: 'https://e-commerce-website-0irp.onrender.com/',
+      demo: 'http://my-ecommerce-store.runasp.net/',
       tech: ['Net', 'WebApi', 'MVC', 'SQL']
     },
     {
