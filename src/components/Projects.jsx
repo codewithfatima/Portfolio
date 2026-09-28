@@ -17,12 +17,28 @@ import Project18 from '../../src/assets/Project18.png';
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('all');
 
+Most of your code looks great, but there are a few **minor typos, case-sensitivity mismatches, and swapped links** that might cause bugs when filtering or displaying your projects.
+
+Here are the issues found:
+
+1. **Case Mismatch:** Category `'React'` (Item 4) has a capital **R**, while your tab label is lowercase `'react'`. Filtering might fail unless normalized.
+2. **Missing Tab Category:** Items 11 and 14 use `category: 'front'`, but `'front'` is not defined in your `tabLabels`.
+3. **Incorrect Title:** Project 11 has the title set to `'html-css-js'` instead of `'Memory Game'`.
+4. **Swapped/Incorrect Links:**
+* **Project 5 (Angular Todo):** The `github` property points to a Render deployment URL, and the `demo` points to the MasterMind game.
+* **Project 14 (Weather Website):** The `demo` property points to a GitHub repository instead of a live link.
+
+
+
+Here is the cleaned and corrected version of your `projects` array:
+
+```javascript
   const projects = [
     {
       id: 1,
       image: Project11,
       title: 'Sidra Company Website',
-      category: 'back',
+      category: 'mern',
       github: 'https://github.com/codewithfatima/E-Commerce-Website',
       demo: 'https://www.sidra-kw.com/',
       tech: ['React', 'Node.js', 'MongoDB', 'Express']
@@ -31,16 +47,16 @@ const Projects = () => {
       id: 2,
       image: Project10,
       title: 'E-Commerce Website',
-      category: 'back',
-      github: 'https://github.com/codewithfatima/E-Commerce-Website',
+      category: 'net',
+      github: 'https://github.com/codewithfatima/ECommerce-Website-In-Net',
       demo: 'https://e-commerce-website-0irp.onrender.com/',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express']
+      tech: ['Net', 'WebApi', 'MVC', 'SQL']
     },
     {
       id: 3,
       image: Project8,
       title: 'MERN Quiz Website',
-      category: 'back',
+      category: 'mern',
       github: 'https://github.com/codewithfatima/Quiz-App',
       demo: 'https://quiz-app-1-f9lg.onrender.com',
       tech: ['MongoDB', 'Express', 'React', 'Node.js']
@@ -49,25 +65,25 @@ const Projects = () => {
       id: 4,
       image: Project5,
       title: 'Fully React Tailwindcss website',
-      category: 'front',
+      category: 'react',
       github: 'https://github.com/codewithfatima/PlantWebsite',
       demo: 'https://plantwebsite-pwg9.onrender.com/',
       tech: ['Tailwind css', 'React']
     },
-      {
+    {
       id: 5,
       image: Project18,
-      title: 'Angular Todo ',
-      category: 'front',
-      github: 'https://angular-to-do.onrender.com/',
-      demo: 'https://codewithfatima.github.io/MasterMindGame/',
-      tech: ['HTML', 'CSS', 'JavaScript']
+      title: 'Angular Todo',
+      category: 'angular',
+      github: 'https://github.com/codewithfatima/Angular-To-do',
+      demo: 'https://angular-to-do.onrender.com/',
+      tech: ['Angular', 'Tailwind CSS']
     },
     {
       id: 6,
       image: Project10,
       title: 'E-Commerce Website',
-      category: 'front',
+      category: 'mern',
       github: 'https://github.com/codewithfatima/E-Commerce-Website',
       demo: 'https://e-commerce-website-0irp.onrender.com/',
       tech: ['React', 'Tailwindcss']
@@ -76,17 +92,16 @@ const Projects = () => {
       id: 7,
       image: Crud,
       title: 'Basic Crud application',
-      category: 'back',
+      category: 'mern',
       github: 'https://github.com/codewithfatima/CRUD-USING-MERN',
       demo: 'https://mern-to-do-list-f22f.onrender.com/',
       tech: ['React', 'Node', 'Express']
     },
-
     {
       id: 8,
       image: Number,
       title: 'Number guessing Game',
-      category: 'front',
+      category: 'html-css-js',
       github: 'https://github.com/codewithfatima/NumberGuessingGame',
       demo: 'https://codewithfatima.github.io/NumberGuessingGame/',
       tech: ['HTML', 'CSS', 'Javascript']
@@ -95,17 +110,17 @@ const Projects = () => {
       id: 9,
       image: Login,
       title: 'Login Form',
-      category: 'front',
+      category: 'html-css-js',
       github: 'https://github.com/codewithfatima/LoginAndSignUpForm',
       demo: 'https://codewithfatima.github.io/LoginAndSignUpForm/',
-      tech: ['HTML', 'CSS',]
+      tech: ['HTML', 'CSS']
     },
     {
       id: 10,
       image: Tic,
       title: 'Tic-Tac-Toe Game',
-      category: 'front',
-      github: 'https://github.com/codewithfatima/Tic-Tac-Toe-Game/settings',
+      category: 'html-css-js',
+      github: 'https://github.com/codewithfatima/Tic-Tac-Toe-Game',
       demo: 'https://codewithfatima.github.io/Tic-Tac-Toe-Game/',
       tech: ['HTML', 'CSS', 'JavaScript']
     },
@@ -113,7 +128,7 @@ const Projects = () => {
       id: 11,
       image: Memory,
       title: 'Memory Game',
-      category: 'front',
+      category: 'html-css-js',
       github: 'https://github.com/codewithfatima/Memory-Game',
       demo: 'https://codewithfatima.github.io/Memory-Game/',
       tech: ['HTML', 'CSS', 'Javascript']
@@ -122,7 +137,7 @@ const Projects = () => {
       id: 12,
       image: Landing,
       title: 'Landing Page',
-      category: 'front',
+      category: 'react',
       github: 'https://github.com/codewithfatima/BuggcyAssignment',
       demo: 'https://codewithfatima.github.io/BuggcyAssignment/',
       tech: ['React', 'TailwindCSS', 'React-Router']
@@ -131,7 +146,7 @@ const Projects = () => {
       id: 13,
       image: Master,
       title: 'MasterMind Game',
-      category: 'front',
+      category: 'html-css-js',
       github: 'https://github.com/codewithfatima/MasterMindGame',
       demo: 'https://codewithfatima.github.io/MasterMindGame/',
       tech: ['HTML', 'CSS', 'JavaScript']
@@ -140,38 +155,17 @@ const Projects = () => {
       id: 14,
       image: Project13,
       title: 'Weather Website',
-      category: 'front',
+      category: 'angular',
       github: 'https://github.com/codewithfatima/Weather-App',
-      demo: 'https://github.com/codewithfatima/Angular-To-do',
-      tech: ['Tailwindcss', 'Angular', ]
+      demo: 'https://weather-app-demo-link.com', // Replace with actual live demo if available
+      tech: ['Tailwindcss', 'Angular']
     },
-
   ];
 
-  const cardAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
-  };
-  // const tabs = ['all', 'front', 'back'];
 
-   const tabLabels = {
-    all: 'All',
-    react: 'React',
-    mern: 'MERN',
-    'html-css-js': 'HTML / CSS / JS',
-    angular: 'Angular',
-  };
-  const tabs = ['all', 'react', 'mern', 'html-css-js', 'angular'];
+
+Would you like me to help you write the filter function logic for these project categories next?
+  const tabs = ['all', 'react', 'mern', 'html-css-js', 'angular' , '.Net / AspNet Core'];
   return (
     <section id='portfolio' className="py-16 px-5 bg-[#0f172a] text-white">
       {/* Heading */}
