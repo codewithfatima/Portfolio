@@ -174,7 +174,7 @@ const Projects = () => {
   }; 
 
 
-  const tabs = ['all', 'react', 'mern', 'html-css-js', 'angular' , '.Net / AspNet Core'];
+  const tabs = ['all', 'react', 'mern', 'html-css-js', 'angular' , 'net'];
   return (
     <section id='portfolio' className="py-16 px-5 bg-[#0f172a] text-white">
       {/* Heading */}
