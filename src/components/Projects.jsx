@@ -16,23 +16,6 @@ import Project18 from '../../src/assets/Project18.png';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('all');
-
-Most of your code looks great, but there are a few **minor typos, case-sensitivity mismatches, and swapped links** that might cause bugs when filtering or displaying your projects.
-
-Here are the issues found:
-
-1. **Case Mismatch:** Category `'React'` (Item 4) has a capital **R**, while your tab label is lowercase `'react'`. Filtering might fail unless normalized.
-2. **Missing Tab Category:** Items 11 and 14 use `category: 'front'`, but `'front'` is not defined in your `tabLabels`.
-3. **Incorrect Title:** Project 11 has the title set to `'html-css-js'` instead of `'Memory Game'`.
-4. **Swapped/Incorrect Links:**
-* **Project 5 (Angular Todo):** The `github` property points to a Render deployment URL, and the `demo` points to the MasterMind game.
-* **Project 14 (Weather Website):** The `demo` property points to a GitHub repository instead of a live link.
-
-
-
-Here is the cleaned and corrected version of your `projects` array:
-
-```javascript
   const projects = [
     {
       id: 1,
@@ -162,9 +145,35 @@ Here is the cleaned and corrected version of your `projects` array:
     },
   ];
 
+  const cardAnimation = {
+
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  // const tabs = ['all', 'front', 'back'];
+
+   const tabLabels = {
+
+    all: 'All',
+    react: 'React',
+    mern: 'MERN',
+    'html-css-js': 'HTML / CSS / JS',
+    net: '.Net / AspNet Core',
+     angular: 'Angular'
+  }; 
 
 
-Would you like me to help you write the filter function logic for these project categories next?
   const tabs = ['all', 'react', 'mern', 'html-css-js', 'angular' , '.Net / AspNet Core'];
   return (
     <section id='portfolio' className="py-16 px-5 bg-[#0f172a] text-white">
